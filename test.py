@@ -15,3 +15,12 @@ class TestModels(unittest.TestCase):
 
     def tearDown(self) -> None:
         Airflow.todolist_list = []
+
+    def test_save_multiple_todolist(self):
+        self.new_todolist.save_todolist_list_item()
+        test_todolist = Airflow("Finish HomePod project")
+        test_todolist.save_todolist_list_item()
+        self.assertEqual(len(Airflow.todolist_list), 2)
+
+
+
