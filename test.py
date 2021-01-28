@@ -34,3 +34,5 @@ class TestModels(unittest.TestCase):
         self.assertEqual(Airflow.display_todolist_list(), Airflow.todolist_list)
 
 
+if __name__ == '__main__':
+    unittest.main()
