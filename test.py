@@ -32,3 +32,5 @@ class TestModels(unittest.TestCase):
 
     def test_display_todolist(self):
         self.assertEqual(Airflow.display_todolist_list(), Airflow.todolist_list)
+
+
