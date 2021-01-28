@@ -22,5 +22,11 @@ class TestModels(unittest.TestCase):
         test_todolist.save_todolist_list_item()
         self.assertEqual(len(Airflow.todolist_list), 2)
 
+    def test_delete_todolist(self):
+        self.new_todolist.save_todolist_list_item()
+        test_todolist = Airflow("Finish HomePod project")
+        test_todolist.save_todolist_list_item()
 
+        self.new_todolist.delete_todolist_list()
+        self.assertEqual(len(Airflow.todolist_list), 1)
 
