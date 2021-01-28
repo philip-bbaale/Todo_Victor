@@ -18,3 +18,5 @@ class Airflow:
     def display_todolist_list(cls):
         return cls.todolist_list
 
+    def delete_todolist_list(self):
+        Airflow.todolist_list.remove(self)
