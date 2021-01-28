@@ -14,3 +14,7 @@ class Airflow:
                 return True
             return False
 
+    @classmethod
+    def display_todolist_list(cls):
+        return cls.todolist_list
+
