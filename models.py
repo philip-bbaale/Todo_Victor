@@ -1,11 +1,10 @@
 class Airflow:
     todolist_list = []
 
-    def __init__(self, todolist_id, todolist_name=None):
+    def __init__(self,  todolist_name=None):
         self.todolist_name = todolist_name
         if todolist_name is None:
             todolist_name = []
-        self.todolist_id = todolist_id(self)
 
         def add_todolist_item(todolist_item):
             todolist_item = todolist_item
