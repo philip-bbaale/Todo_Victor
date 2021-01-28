@@ -10,6 +10,7 @@ class Airflow:
         def add_todolist_item(todolist_item):
             todolist_item = todolist_item
             todolist_name.append(todolist_item)
+            return add_todolist_item(todolist_item)
 
     def save_todolist_item(self):
         Airflow.todolist_list.append(self)
