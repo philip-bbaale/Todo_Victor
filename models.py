@@ -20,3 +20,8 @@ class Airflow:
 
     def delete_todolist_list(self):
         Airflow.todolist_list.remove(self)
+
+
+class TodoList:
+    def __init__(self, todolist_name):
+        self.todolist_name = todolist_name
