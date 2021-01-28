@@ -2,9 +2,9 @@ class Airflow:
     todolist_list = []
 
     def __init__(self, todolist_id, todolist_name=None):
+        self.todolist_name = todolist_name
         if todolist_name is None:
             todolist_name = []
-        self.todolist_name = todolist_name
         self.todolist_id = todolist_id
 
         def add_todolist_item(todolist_item):
@@ -12,7 +12,7 @@ class Airflow:
             todolist_name.append(todolist_item)
             return add_todolist_item(todolist_item)
 
-    def save_todolist_item(self):
+    def save_todolist_list_item(self):
         Airflow.todolist_list.append(self)
 
     @classmethod
