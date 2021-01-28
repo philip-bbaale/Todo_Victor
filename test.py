@@ -2,6 +2,10 @@ import unittest
 from models import Airflow
 
 
+def tearDown_item() -> None:
+    Airflow.todolist_list.todolist_item = []
+
+
 class TestModels(unittest.TestCase):
     def setUp(self) -> None:
         self.new_todolist = Airflow("Grocery Shopping")
